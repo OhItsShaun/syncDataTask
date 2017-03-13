@@ -3,7 +3,7 @@ import Foundation
     import Dispatch
 #endif
 
-extension URLSession {
+public extension URLSession {
     
     /// Perform a URL request synchronously, whereby the function will return either once the task has completed 
     /// or an error has occured.
@@ -15,7 +15,7 @@ extension URLSession {
     /// - Parameter request: The` URLRequest` object that provides the `URL`, cache policy, request type, body data or body stream, and so on.
     /// - Returns: An object that provides response metadata, such as HTTP headers and status code, and the data returned by the server.
     /// - Throws: An error object that indicates why the request failed, for example time out or network connection issue.
-    func syncDataTask(with request: URLRequest) throws -> (URLResponse?, Data?) {
+    public func syncDataTask(with request: URLRequest) throws -> (URLResponse?, Data?) {
         var data: Data?
         var response: URLResponse?
         var error: Error?
